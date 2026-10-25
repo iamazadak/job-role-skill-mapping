@@ -1,0 +1,308 @@
+{
+  "role_skills": {
+    "Assembly & Production Associate": {
+      "job_count": 64,
+      "total_vacancies": 10941,
+      "top_skills": {
+        "Injection Molding": 3.1,
+        "Fitting & Mechanical Assembly": 1.6
+      }
+    },
+    "CNC & Machine Operation": {
+      "job_count": 112,
+      "total_vacancies": 8636,
+      "top_skills": {
+        "CNC Operation": 30.4,
+        "VMC Operation": 7.1,
+        "Electrical Maintenance & Wiring": 2.7,
+        "Material Traceability & Reporting": 2.7,
+        "Fitting & Mechanical Assembly": 2.7
+      }
+    },
+    "Engineering & Supervision": {
+      "job_count": 9,
+      "total_vacancies": 849,
+      "top_skills": {
+        "Electrical Maintenance & Wiring": 22.2,
+        "Blueprint & Drawing Reading": 11.1,
+        "5S & Workplace Organization": 11.1,
+        "Preventive Maintenance": 11.1,
+        "PPE & Industrial Safety": 11.1
+      }
+    },
+    "General Production & Support": {
+      "job_count": 44,
+      "total_vacancies": 6384,
+      "top_skills": {
+        "Injection Molding": 2.3,
+        "Electrical Maintenance & Wiring": 2.3,
+        "Preventive Maintenance": 2.3
+      }
+    },
+    "Industrial & Apprentice Trainee": {
+      "job_count": 207,
+      "total_vacancies": 18222,
+      "top_skills": {
+        "Injection Molding": 4.3,
+        "Electrical Maintenance & Wiring": 3.9,
+        "Press & Stamping": 1.9,
+        "Blueprint & Drawing Reading": 0.5,
+        "Machine Setup & Tooling": 0.5
+      }
+    },
+    "Material Handling & Heavy Equipment": {
+      "job_count": 113,
+      "total_vacancies": 600,
+      "top_skills": {
+        "Forklift Operation (FLT)": 68.1,
+        "Reach Truck Operation (RT)": 24.8,
+        "Articulated Forklift (AFLT)": 23.0,
+        "BOPT & Pallet Truck": 13.3,
+        "Order Picking & Packing": 1.8
+      }
+    },
+    "Quality Assurance & Inspection": {
+      "job_count": 85,
+      "total_vacancies": 11736,
+      "top_skills": {
+        "Dimensional Measurement": 21.2,
+        "CNC Operation": 17.6,
+        "VMC Operation": 16.5,
+        "Preventive Maintenance": 8.2,
+        "Material Traceability & Reporting": 7.1
+      }
+    },
+    "Sales, Retail & Commercial": {
+      "job_count": 8,
+      "total_vacancies": 782,
+      "top_skills": {
+        "Customer Service & Retail Sales": 62.5,
+        "Material Traceability & Reporting": 12.5
+      }
+    },
+    "Warehouse, Logistics & Fulfillment": {
+      "job_count": 58,
+      "total_vacancies": 8364,
+      "top_skills": {
+        "Loading & Unloading": 46.6,
+        "Order Picking & Packing": 43.1,
+        "Preventive Maintenance": 37.9,
+        "5S & Workplace Organization": 32.8,
+        "Material Traceability & Reporting": 32.8
+      }
+    },
+    "Welding, Fitting & Technical Trades": {
+      "job_count": 34,
+      "total_vacancies": 4724,
+      "top_skills": {
+        "Preventive Maintenance": 52.9,
+        "Material Traceability & Reporting": 38.2,
+        "Welding (MIG/TIG/Arc)": 35.3,
+        "PPE & Industrial Safety": 11.8,
+        "Fitting & Mechanical Assembly": 8.8
+      }
+    }
+  },
+  "salary_by_role": {
+    "Assembly & Production Associate": {
+      "count": 12,
+      "median": 14500.0,
+      "mean": 15442.0,
+      "min": 10000.0,
+      "max": 21000.0
+    },
+    "CNC & Machine Operation": {
+      "count": 95,
+      "median": 17000.0,
+      "mean": 17220.0,
+      "min": 8580.0,
+      "max": 25000.0
+    },
+    "Engineering & Supervision": {
+      "count": 4,
+      "median": 17900.0,
+      "mean": 17875.0,
+      "min": 16354.0,
+      "max": 19345.0
+    },
+    "General Production & Support": {
+      "count": 5,
+      "median": 16900.0,
+      "mean": 12540.0,
+      "min": 1500.0,
+      "max": 18400.0
+    },
+    "Industrial & Apprentice Trainee": {
+      "count": 129,
+      "median": 17000.0,
+      "mean": 17362.0,
+      "min": 10000.0,
+      "max": 26200.0
+    },
+    "Material Handling & Heavy Equipment": {
+      "count": 5,
+      "median": 13000.0,
+      "mean": 12992.0,
+      "min": 12032.0,
+      "max": 14000.0
+    },
+    "Quality Assurance & Inspection": {
+      "count": 48,
+      "median": 15400.0,
+      "mean": 15912.0,
+      "min": 10000.0,
+      "max": 23500.0
+    },
+    "Sales, Retail & Commercial": {
+      "count": 2,
+      "median": 11250.0,
+      "mean": 11250.0,
+      "min": 11000.0,
+      "max": 11500.0
+    },
+    "Warehouse, Logistics & Fulfillment": {
+      "count": 32,
+      "median": 16972.0,
+      "mean": 17746.0,
+      "min": 13000.0,
+      "max": 25000.0
+    },
+    "Welding, Fitting & Technical Trades": {
+      "count": 19,
+      "median": 16721.0,
+      "mean": 16625.0,
+      "min": 11775.0,
+      "max": 22750.0
+    }
+  },
+  "skill_premiums": [
+    {
+      "skill": "CNC Operation",
+      "jobs_with_skill": 49,
+      "median_with": 15120.0,
+      "median_without": 17000.0,
+      "premium_rs": -1880.0,
+      "premium_pct": -11.1
+    },
+    {
+      "skill": "VMC Operation",
+      "jobs_with_skill": 20,
+      "median_with": 14650.0,
+      "median_without": 17000.0,
+      "premium_rs": -2350.0,
+      "premium_pct": -13.8
+    },
+    {
+      "skill": "Press & Stamping",
+      "jobs_with_skill": 5,
+      "median_with": 19150.0,
+      "median_without": 16721.0,
+      "premium_rs": 2429.0,
+      "premium_pct": 14.5
+    },
+    {
+      "skill": "Injection Molding",
+      "jobs_with_skill": 9,
+      "median_with": 15000.0,
+      "median_without": 16800.0,
+      "premium_rs": -1800.0,
+      "premium_pct": -10.7
+    },
+    {
+      "skill": "Machine Setup & Tooling",
+      "jobs_with_skill": 5,
+      "median_with": 14900.0,
+      "median_without": 16900.0,
+      "premium_rs": -2000.0,
+      "premium_pct": -11.8
+    },
+    {
+      "skill": "Order Picking & Packing",
+      "jobs_with_skill": 22,
+      "median_with": 17350.0,
+      "median_without": 16780.0,
+      "premium_rs": 570.0,
+      "premium_pct": 3.4
+    },
+    {
+      "skill": "Loading & Unloading",
+      "jobs_with_skill": 7,
+      "median_with": 14900.0,
+      "median_without": 16912.0,
+      "premium_rs": -2012.0,
+      "premium_pct": -11.9
+    },
+    {
+      "skill": "Dimensional Measurement",
+      "jobs_with_skill": 20,
+      "median_with": 14500.0,
+      "median_without": 17000.0,
+      "premium_rs": -2500.0,
+      "premium_pct": -14.7
+    },
+    {
+      "skill": "5S & Workplace Organization",
+      "jobs_with_skill": 7,
+      "median_with": 14900.0,
+      "median_without": 16900.0,
+      "premium_rs": -2000.0,
+      "premium_pct": -11.8
+    },
+    {
+      "skill": "Welding (MIG/TIG/Arc)",
+      "jobs_with_skill": 9,
+      "median_with": 17513.0,
+      "median_without": 16790.0,
+      "premium_rs": 723.0,
+      "premium_pct": 4.3
+    },
+    {
+      "skill": "Fitting & Mechanical Assembly",
+      "jobs_with_skill": 5,
+      "median_with": 18010.0,
+      "median_without": 16750.0,
+      "premium_rs": 1260.0,
+      "premium_pct": 7.5
+    },
+    {
+      "skill": "Electrical Maintenance & Wiring",
+      "jobs_with_skill": 5,
+      "median_with": 18900.0,
+      "median_without": 16750.0,
+      "premium_rs": 2150.0,
+      "premium_pct": 12.8
+    },
+    {
+      "skill": "Preventive Maintenance",
+      "jobs_with_skill": 24,
+      "median_with": 16721.0,
+      "median_without": 16801.0,
+      "premium_rs": -80.0,
+      "premium_pct": -0.5
+    },
+    {
+      "skill": "PPE & Industrial Safety",
+      "jobs_with_skill": 7,
+      "median_with": 17920.0,
+      "median_without": 16721.0,
+      "premium_rs": 1199.0,
+      "premium_pct": 7.2
+    },
+    {
+      "skill": "Material Traceability & Reporting",
+      "jobs_with_skill": 24,
+      "median_with": 17110.0,
+      "median_without": 16800.0,
+      "premium_rs": 310.0,
+      "premium_pct": 1.8
+    },
+    {
+      "skill": "Customer Service & Retail Sales",
+      "jobs_with_skill": 5,
+      "median_with": 15000.0,
+      "median_without": 16800.0,
+      "premium_rs": -1800.0,
+      "premium_pct": -10.7
+    }
+  ]
+}

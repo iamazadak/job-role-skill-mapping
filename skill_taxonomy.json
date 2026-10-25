@@ -1,0 +1,70 @@
+{
+  "categories": {
+    "Machining & Equipment": [
+      "CNC Operation",
+      "VMC Operation",
+      "Lathe & Milling Machine",
+      "Grinding & Polishing",
+      "Press & Stamping",
+      "Injection Molding",
+      "Machine Setup & Tooling"
+    ],
+    "Material Handling & Logistics": [
+      "Forklift Operation (FLT)",
+      "Reach Truck Operation (RT)",
+      "Articulated Forklift (AFLT)",
+      "BOPT & Pallet Truck",
+      "Order Picking & Packing",
+      "Inventory & Stock Auditing",
+      "Loading & Unloading",
+      "Barcode Scanning & WMS"
+    ],
+    "Quality & Metrology": [
+      "Vernier Caliper & Micrometer",
+      "Dimensional Measurement",
+      "Blueprint & Drawing Reading",
+      "Visual Quality Inspection",
+      "5S & Workplace Organization"
+    ],
+    "Technical Trades & Maintenance": [
+      "Welding (MIG/TIG/Arc)",
+      "Fitting & Mechanical Assembly",
+      "Electrical Maintenance & Wiring",
+      "Preventive Maintenance"
+    ],
+    "Safety & Operations": [
+      "PPE & Industrial Safety",
+      "Material Traceability & Reporting",
+      "Customer Service & Retail Sales"
+    ]
+  },
+  "skill_list": [
+    "CNC Operation",
+    "VMC Operation",
+    "Lathe & Milling Machine",
+    "Grinding & Polishing",
+    "Press & Stamping",
+    "Injection Molding",
+    "Machine Setup & Tooling",
+    "Forklift Operation (FLT)",
+    "Reach Truck Operation (RT)",
+    "Articulated Forklift (AFLT)",
+    "BOPT & Pallet Truck",
+    "Order Picking & Packing",
+    "Inventory & Stock Auditing",
+    "Loading & Unloading",
+    "Barcode Scanning & WMS",
+    "Vernier Caliper & Micrometer",
+    "Dimensional Measurement",
+    "Blueprint & Drawing Reading",
+    "Visual Quality Inspection",
+    "5S & Workplace Organization",
+    "Welding (MIG/TIG/Arc)",
+    "Fitting & Mechanical Assembly",
+    "Electrical Maintenance & Wiring",
+    "Preventive Maintenance",
+    "PPE & Industrial Safety",
+    "Material Traceability & Reporting",
+    "Customer Service & Retail Sales"
+  ]
+}
