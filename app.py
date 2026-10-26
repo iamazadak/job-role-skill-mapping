@@ -35,26 +35,26 @@ st.markdown("""
     }
     
     .main {
-        background-color: #0b0f19;
+        background-color: #f8fafc;
     }
     
     /* KPI Card styling */
     .kpi-card {
-        background: linear-gradient(135deg, rgba(30, 41, 59, 0.7) 0%, rgba(15, 23, 42, 0.8) 100%);
-        border: 1px solid rgba(255, 255, 255, 0.08);
+        background: #ffffff;
+        border: 1px solid #e2e8f0;
         border-radius: 12px;
         padding: 18px 20px;
         margin-bottom: 12px;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
-        backdrop-filter: blur(12px);
-        transition: transform 0.2s ease, border-color 0.2s ease;
+        box-shadow: 0 2px 8px rgba(15, 23, 42, 0.05);
+        transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
     }
     .kpi-card:hover {
         transform: translateY(-2px);
-        border-color: rgba(244, 109, 67, 0.5);
+        border-color: #cbd5e1;
+        box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08);
     }
     .kpi-title {
-        color: #94a3b8;
+        color: #64748b;
         font-size: 0.8rem;
         font-weight: 600;
         text-transform: uppercase;
@@ -62,7 +62,7 @@ st.markdown("""
         margin-bottom: 6px;
     }
     .kpi-value {
-        color: #f8fafc;
+        color: #0f172a;
         font-size: 1.85rem;
         font-weight: 800;
         margin: 0;
@@ -80,7 +80,7 @@ st.markdown("""
     .section-title {
         font-size: 1.35rem;
         font-weight: 700;
-        color: #f1f5f9;
+        color: #0f172a;
         margin-top: 1.25rem;
         margin-bottom: 0.4rem;
         display: flex;
@@ -89,7 +89,7 @@ st.markdown("""
         letter-spacing: -0.01em;
     }
     .section-desc {
-        color: #94a3b8;
+        color: #475569;
         font-size: 0.92rem;
         margin-bottom: 1.25rem;
         line-height: 1.55;
@@ -99,7 +99,7 @@ st.markdown("""
     .skill-pill {
         display: inline-block;
         background: rgba(244, 109, 67, 0.12);
-        color: #fdae61;
+        color: #c2410c;
         border: 1px solid rgba(244, 109, 67, 0.35);
         border-radius: 16px;
         padding: 3px 10px;
@@ -108,9 +108,9 @@ st.markdown("""
         margin: 3px 4px 3px 0;
     }
     .badge-match {
-        background: linear-gradient(135deg, rgba(213, 62, 79, 0.2) 0%, rgba(244, 109, 67, 0.2) 100%);
-        color: #fdae61;
-        border: 1px solid rgba(244, 109, 67, 0.4);
+        background: linear-gradient(135deg, rgba(213, 62, 79, 0.15) 0%, rgba(244, 109, 67, 0.15) 100%);
+        color: #c2410c;
+        border: 1px solid rgba(244, 109, 67, 0.35);
         border-radius: 12px;
         padding: 3px 10px;
         font-size: 0.82rem;
@@ -119,11 +119,12 @@ st.markdown("""
     
     /* Chart Card Container */
     .plot-container {
-        background: rgba(15, 23, 42, 0.6);
-        border: 1px solid rgba(255, 255, 255, 0.06);
+        background: #ffffff;
+        border: 1px solid #e2e8f0;
         border-radius: 12px;
         padding: 8px;
         margin-bottom: 16px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
     }
 </style>
 """, unsafe_allow_html=True)
@@ -133,34 +134,34 @@ def apply_theme_layout(fig, title_text="", height=440, show_legend=True):
     fig.update_layout(
         title=dict(
             text=f"<b>{title_text}</b>" if title_text else "",
-            font=dict(family=FONT_FAMILY, size=15, color="#f8fafc"),
+            font=dict(family=FONT_FAMILY, size=15, color="#0f172a"),
             x=0.01,
             y=0.96
         ),
-        font=dict(family=FONT_FAMILY, size=12, color="#cbd5e1"),
+        font=dict(family=FONT_FAMILY, size=12, color="#334155"),
         paper_bgcolor="rgba(0,0,0,0)",
         plot_bgcolor="rgba(0,0,0,0)",
         height=height,
         margin=dict(l=25, r=25, t=55 if title_text else 30, b=45),
         showlegend=show_legend,
         legend=dict(
-            font=dict(family=FONT_FAMILY, size=11, color="#cbd5e1"),
-            bgcolor="rgba(15, 23, 42, 0.7)",
-            bordercolor="rgba(255, 255, 255, 0.1)",
+            font=dict(family=FONT_FAMILY, size=11, color="#334155"),
+            bgcolor="rgba(255, 255, 255, 0.85)",
+            bordercolor="#e2e8f0",
             borderwidth=1
         )
     )
     fig.update_xaxes(
-        tickfont=dict(family=FONT_FAMILY, size=11, color="#94a3b8"),
-        title_font=dict(family=FONT_FAMILY, size=12, color="#cbd5e1"),
-        gridcolor="rgba(255, 255, 255, 0.06)",
-        zerolinecolor="rgba(255, 255, 255, 0.12)"
+        tickfont=dict(family=FONT_FAMILY, size=11, color="#475569"),
+        title_font=dict(family=FONT_FAMILY, size=12, color="#0f172a"),
+        gridcolor="rgba(0, 0, 0, 0.06)",
+        zerolinecolor="rgba(0, 0, 0, 0.12)"
     )
     fig.update_yaxes(
-        tickfont=dict(family=FONT_FAMILY, size=11, color="#94a3b8"),
-        title_font=dict(family=FONT_FAMILY, size=12, color="#cbd5e1"),
-        gridcolor="rgba(255, 255, 255, 0.06)",
-        zerolinecolor="rgba(255, 255, 255, 0.12)"
+        tickfont=dict(family=FONT_FAMILY, size=11, color="#475569"),
+        title_font=dict(family=FONT_FAMILY, size=12, color="#0f172a"),
+        gridcolor="rgba(0, 0, 0, 0.06)",
+        zerolinecolor="rgba(0, 0, 0, 0.12)"
     )
     return fig
 
@@ -191,8 +192,8 @@ except Exception as e:
 st.sidebar.markdown(
     "<div style='display: flex; align-items: center; gap: 10px; margin-bottom: 15px;'>"
     "<span style='font-size: 2rem;'>💼</span>"
-    "<div><b style='color: #f8fafc; font-size: 1.15rem;'>Skill Intelligence</b><br>"
-    "<span style='color: #94a3b8; font-size: 0.8rem;'>Job Market Analytics Engine</span></div>"
+    "<div><b style='color: #0f172a; font-size: 1.15rem;'>Skill Intelligence</b><br>"
+    "<span style='color: #64748b; font-size: 0.8rem;'>Job Market Analytics Engine</span></div>"
     "</div>",
     unsafe_allow_html=True
 )
@@ -253,8 +254,8 @@ if st.sidebar.button("Reset All Filters", use_container_width=True):
 # ==========================================
 # MAIN DASHBOARD HEADER & KPI CARDS
 # ==========================================
-st.markdown("<h1 style='color: #f8fafc; font-weight: 800; font-size: 2.2rem; margin-bottom: 2px; letter-spacing: -0.02em;'>🎯 Industrial & Technical Job Market Intelligence</h1>", unsafe_allow_html=True)
-st.markdown("<p style='color: #94a3b8; font-size: 1.05rem; margin-bottom: 1.5rem;'>Data Analyst Deep Dive: <b>Which Job Role Needs Which Skill Sets?</b>, Compensation Benchmarks & Talent Pipelines</p>", unsafe_allow_html=True)
+st.markdown("<h1 style='color: #0f172a; font-weight: 800; font-size: 2.2rem; margin-bottom: 2px; letter-spacing: -0.02em;'>🎯 Industrial & Technical Job Market Intelligence</h1>", unsafe_allow_html=True)
+st.markdown("<p style='color: #475569; font-size: 1.05rem; margin-bottom: 1.5rem;'>Data Analyst Deep Dive: <b>Which Job Role Needs Which Skill Sets?</b>, Compensation Benchmarks & Talent Pipelines</p>", unsafe_allow_html=True)
 
 # Top Metrics
 total_postings = len(filtered_df)
@@ -325,13 +326,12 @@ if total_postings == 0:
 # ==========================================
 # INTERACTIVE TABS
 # ==========================================
-tab1, tab2, tab3, tab4, tab5, tab6 = st.tabs([
+tab1, tab2, tab3, tab4, tab5 = st.tabs([
     "🧩 1. The Core Question: Role vs Skill Sets",
     "💰 2. Compensation & Skill Premiums",
     "🎓 3. Talent Pipeline & Qualifications",
     "🗺️ 4. Geographic & Industry Ecosystem",
-    "🎯 5. Career & Skill Fit Matcher",
-    "📋 6. Data Explorer & Export"
+    "📋 5. Data Explorer & Export"
 ])
 
 # ==============================================================================
@@ -422,13 +422,13 @@ with tab1:
         colorbar=dict(
             title=dict(
                 text=f"<b>{z_title}</b>",
-                font=dict(family=FONT_FAMILY, size=12, color="#f8fafc")
+                font=dict(family=FONT_FAMILY, size=12, color="#0f172a")
             ),
-            tickfont=dict(family=FONT_FAMILY, size=11, color="#cbd5e1"),
+            tickfont=dict(family=FONT_FAMILY, size=11, color="#475569"),
             len=0.95,
             thickness=18,
             outlinewidth=1,
-            outlinecolor="rgba(255, 255, 255, 0.15)"
+            outlinecolor="#cbd5e1"
         ),
         hoverongaps=False,
         hovertemplate="<b>Role:</b> %{x}<br><b>Skill:</b> %{y}<br><b>Value:</b> %{z:.1f}<extra></extra>"
@@ -438,22 +438,22 @@ with tab1:
         annotations=annotations,
         title=dict(
             text="<b>Role vs. Skill Affinity Matrix</b> (Percentage Demand)",
-            font=dict(family=FONT_FAMILY, size=16, color="#f8fafc"),
+            font=dict(family=FONT_FAMILY, size=16, color="#0f172a"),
             x=0.01,
             y=0.98
         ),
-        font=dict(family=FONT_FAMILY, size=12, color="#cbd5e1"),
+        font=dict(family=FONT_FAMILY, size=12, color="#334155"),
         paper_bgcolor="rgba(0,0,0,0)",
         plot_bgcolor="rgba(0,0,0,0)",
         height=max(460, len(active_skills) * 27 + 130),
         margin=dict(l=20, r=20, t=55, b=120),
         xaxis=dict(
             tickangle=-32,
-            tickfont=dict(family=FONT_FAMILY, size=11, color="#e2e8f0"),
+            tickfont=dict(family=FONT_FAMILY, size=11, color="#334155"),
             showgrid=False
         ),
         yaxis=dict(
-            tickfont=dict(family=FONT_FAMILY, size=11, color="#e2e8f0"),
+            tickfont=dict(family=FONT_FAMILY, size=11, color="#334155"),
             showgrid=False,
             autorange="reversed"
         )
@@ -474,12 +474,12 @@ with tab1:
         <div class="kpi-card" style="margin-top: 8px;">
             <div class="kpi-title">Role Profile</div>
             <div class="kpi-value" style="font-size: 1.4rem;">{selected_role_drill}</div>
-            <p style="margin: 10px 0 4px 0; color: #cbd5e1; font-size: 0.88rem; line-height: 1.6;">
-                <b>Total Listings:</b> <span style="color: #f8fafc; font-weight: 700;">{len(role_subset):,}</span><br>
-                <b>Total Vacancies:</b> <span style="color: #fdae61; font-weight: 700;">{role_subset['vacancy_num'].sum():,} openings</span><br>
-                <b>Median Monthly Pay:</b> <span style="color: #66c2a5; font-weight: 700;">₹{role_subset['monthly_salary'].median():,.0f}</span><br>
-                <b>Primary Qualification:</b> <span style="color: #f8fafc;">{role_subset['clean_qualification'].mode().iloc[0] if len(role_subset)>0 else 'N/A'}</span><br>
-                <b>Top Hiring Industry:</b> <span style="color: #f8fafc;">{role_subset['clean_industry'].mode().iloc[0] if len(role_subset)>0 else 'N/A'}</span>
+            <p style="margin: 10px 0 4px 0; color: #475569; font-size: 0.88rem; line-height: 1.6;">
+                <b>Total Listings:</b> <span style="color: #0f172a; font-weight: 700;">{len(role_subset):,}</span><br>
+                <b>Total Vacancies:</b> <span style="color: #c2410c; font-weight: 700;">{role_subset['vacancy_num'].sum():,} openings</span><br>
+                <b>Median Monthly Pay:</b> <span style="color: #059669; font-weight: 700;">₹{role_subset['monthly_salary'].median():,.0f}</span><br>
+                <b>Primary Qualification:</b> <span style="color: #0f172a;">{role_subset['clean_qualification'].mode().iloc[0] if len(role_subset)>0 else 'N/A'}</span><br>
+                <b>Top Hiring Industry:</b> <span style="color: #0f172a;">{role_subset['clean_industry'].mode().iloc[0] if len(role_subset)>0 else 'N/A'}</span>
             </p>
         </div>
         """, unsafe_allow_html=True)
@@ -496,11 +496,11 @@ with tab1:
             orientation='h',
             text=[f"<b>{val:.1f}%</b>" for val in role_skills_nonzero.values],
             textposition='outside',
-            textfont=dict(family=FONT_FAMILY, size=11, color="#f8fafc"),
+            textfont=dict(family=FONT_FAMILY, size=11, color="#0f172a"),
             marker=dict(
                 color=role_skills_nonzero.values,
                 colorscale="Spectral_r",
-                line=dict(color="rgba(255, 255, 255, 0.2)", width=1)
+                line=dict(color="rgba(0, 0, 0, 0.1)", width=1)
             )
         ))
         apply_theme_layout(fig_role_bar, title_text=f"Core Skill Requirements for: {selected_role_drill}", height=360, show_legend=False)
@@ -555,28 +555,28 @@ with tab1:
                 radialaxis=dict(
                     visible=True,
                     range=[0, max_radar_val + 8],
-                    tickfont=dict(family=FONT_FAMILY, size=10, color="#94a3b8"),
-                    gridcolor="rgba(255, 255, 255, 0.08)"
+                    tickfont=dict(family=FONT_FAMILY, size=10, color="#64748b"),
+                    gridcolor="rgba(0, 0, 0, 0.08)"
                 ),
                 angularaxis=dict(
-                    tickfont=dict(family=FONT_FAMILY, size=11, color="#f1f5f9", weight=600),
-                    gridcolor="rgba(255, 255, 255, 0.08)"
+                    tickfont=dict(family=FONT_FAMILY, size=11, color="#0f172a", weight=600),
+                    gridcolor="rgba(0, 0, 0, 0.08)"
                 ),
                 bgcolor="rgba(0,0,0,0)"
             ),
-            font=dict(family=FONT_FAMILY, size=12, color="#cbd5e1"),
+            font=dict(family=FONT_FAMILY, size=12, color="#334155"),
             paper_bgcolor="rgba(0,0,0,0)",
             plot_bgcolor="rgba(0,0,0,0)",
             height=460,
             margin=dict(l=40, r=40, t=50, b=40),
             legend=dict(
-                font=dict(family=FONT_FAMILY, size=11, color="#cbd5e1"),
-                bgcolor="rgba(15, 23, 42, 0.7)",
-                bordercolor="rgba(255, 255, 255, 0.1)"
+                font=dict(family=FONT_FAMILY, size=11, color="#334155"),
+                bgcolor="rgba(255, 255, 255, 0.85)",
+                bordercolor="#e2e8f0"
             ),
             title=dict(
                 text="<b>Cross-Category Skill Portfolio Footprint</b>",
-                font=dict(family=FONT_FAMILY, size=15, color="#f8fafc")
+                font=dict(family=FONT_FAMILY, size=15, color="#0f172a")
             )
         )
         st.plotly_chart(fig_radar, use_container_width=True)
@@ -623,7 +623,7 @@ with tab2:
             hole=0.52,
             textinfo='label+percent',
             textposition='outside',
-            textfont=dict(family=FONT_FAMILY, size=11, color="#e2e8f0"),
+            textfont=dict(family=FONT_FAMILY, size=11, color="#0f172a"),
             marker=dict(colors=["#5e4fa2", "#3288bd", "#66c2a5", "#fdae61", "#d53e4f"])
         )])
         apply_theme_layout(fig_donut, title_text="Job Postings by Salary Band", height=420, show_legend=False)
@@ -668,13 +668,13 @@ with tab2:
         orientation='h',
         text=label_text,
         textposition='outside',
-        textfont=dict(family=FONT_FAMILY, size=11, color="#f8fafc"),
+        textfont=dict(family=FONT_FAMILY, size=11, color="#0f172a"),
         marker=dict(
             color=bar_colors,
-            line=dict(color="rgba(255, 255, 255, 0.15)", width=1)
+            line=dict(color="rgba(0, 0, 0, 0.1)", width=1)
         )
     ))
-    fig_prem.add_vline(x=0, line_dash="dash", line_color="#94a3b8", line_width=1.5)
+    fig_prem.add_vline(x=0, line_dash="dash", line_color="#64748b", line_width=1.5)
     apply_theme_layout(fig_prem, title_text="Net Skill Premium (₹/month) Relative to Market Baseline", height=500, show_legend=False)
     fig_prem.update_xaxes(
         title_text="Monthly Wage Premium / Discount (₹)",
@@ -755,7 +755,7 @@ with tab3:
             hole=0.48,
             textinfo='label+percent',
             textposition='outside',
-            textfont=dict(family=FONT_FAMILY, size=11, color="#e2e8f0"),
+            textfont=dict(family=FONT_FAMILY, size=11, color="#0f172a"),
             marker=dict(colors=["#66c2a5", "#3288bd", "#fdae61", "#d53e4f"])
         )])
         apply_theme_layout(fig_exp, title_text="Experience Requirements across Openings", height=390, show_legend=False)
@@ -814,11 +814,11 @@ with tab4:
             orientation='h',
             text=[f"<b>{v:,.0f}</b>" for v in state_agg['Vacancies']],
             textposition='outside',
-            textfont=dict(family=FONT_FAMILY, size=11, color="#f8fafc"),
+            textfont=dict(family=FONT_FAMILY, size=11, color="#0f172a"),
             marker=dict(
                 color=state_agg['Vacancies'],
                 colorscale="Spectral_r",
-                line=dict(color="rgba(255, 255, 255, 0.2)", width=1)
+                line=dict(color="rgba(0, 0, 0, 0.1)", width=1)
             )
         ))
         apply_theme_layout(fig_state, title_text="Top Hiring States by Total Job Vacancies (Openings)", height=440, show_legend=False)
@@ -860,11 +860,11 @@ with tab4:
         orientation='h',
         text=[f"<b>{v:,.0f} openings</b>" for v in top_clients['Vacancies']],
         textposition='outside',
-        textfont=dict(family=FONT_FAMILY, size=11, color="#f8fafc"),
+        textfont=dict(family=FONT_FAMILY, size=11, color="#0f172a"),
         marker=dict(
             color=top_clients['Vacancies'],
             colorscale="Spectral_r",
-            line=dict(color="rgba(255, 255, 255, 0.2)", width=1)
+            line=dict(color="rgba(0, 0, 0, 0.1)", width=1)
         )
     ))
     apply_theme_layout(fig_clients, title_text="Top 15 Employers by Aggregate Open Vacancies", height=480, show_legend=False)
@@ -876,94 +876,9 @@ with tab4:
 
 
 # ==============================================================================
-# TAB 5: CAREER & SKILL FIT MATCHER
+# TAB 5: DATA EXPLORER & EXPORT
 # ==============================================================================
 with tab5:
-    st.markdown("<div class='section-title'>🎯 Realtime Career & Skill Fit Matcher</div>", unsafe_allow_html=True)
-    st.markdown(
-        "<div class='section-desc'>Select a candidate's background to calculate an "
-        "affinity match score across all industrial job roles. Inspect expected pay ranges, open openings, and recommended skills to acquire.</div>",
-        unsafe_allow_html=True
-    )
-
-    col_m1, col_m2 = st.columns([1, 2])
-
-    with col_m1:
-        user_qual = st.selectbox("Candidate Education Level:", options=all_quals)
-        user_skills = st.multiselect(
-            "Select Candidate's Skills / Competencies:",
-            options=skill_cols,
-            default=["CNC Operation", "Vernier Caliper & Micrometer"]
-        )
-        min_match_thresh = st.slider("Minimum Match Threshold (%):", min_value=10, max_value=80, value=25, step=5)
-
-    with col_m2:
-        role_matches = []
-        user_vector = np.array([1 if s in user_skills else 0 for s in skill_cols])
-
-        for r_name in df['standardized_role'].unique():
-            sub = df[df['standardized_role'] == r_name]
-            role_vector = sub[skill_cols].mean().values
-            
-            if user_vector.sum() == 0:
-                similarity = 0.0
-            else:
-                intersection = np.sum(np.minimum(user_vector, role_vector))
-                union = np.sum(np.maximum(user_vector, role_vector))
-                similarity = (intersection / max(1e-6, union)) * 100
-
-            edu_share = (sub['clean_qualification'] == user_qual).mean() * 100
-            
-            role_top_skills = sub[skill_cols].mean().sort_values(ascending=False).head(5)
-            missing_skills = [s for s in role_top_skills.index if s not in user_skills and role_top_skills[s] > 0.05]
-
-            med_p = sub['monthly_salary'].median()
-            pay_str = f"₹{int(med_p):,}/mo" if not np.isnan(med_p) else "Negotiable"
-
-            role_matches.append({
-                "Job Role": r_name,
-                "Skill Match Score": round(similarity, 1),
-                "Education Fit": f"{edu_share:.0f}% of role has this degree",
-                "Open Vacancies": int(sub['vacancy_num'].sum()),
-                "Median Salary": pay_str,
-                "Key Skills to Acquire": missing_skills[:3]
-            })
-
-        match_df = pd.DataFrame(role_matches).sort_values(by="Skill Match Score", ascending=False)
-        qualified_matches = match_df[match_df['Skill Match Score'] >= min_match_thresh]
-
-        if len(qualified_matches) > 0:
-            st.markdown(f"### Found {len(qualified_matches)} Recommended Roles")
-            for idx, r in qualified_matches.iterrows():
-                missing_pills = " ".join([f"<span class='skill-pill'>{s}</span>" for s in r['Key Skills to Acquire']])
-                if not missing_pills:
-                    missing_pills = "<span class='badge-match'>All core skills matched!</span>"
-                    
-                st.markdown(f"""
-                <div class="kpi-card" style="margin-bottom: 12px;">
-                    <div style="display: flex; justify-content: space-between; align-items: center;">
-                        <h4 style="margin: 0; color: #f8fafc; font-weight: 700;">{r['Job Role']}</h4>
-                        <span class="badge-match">{r['Skill Match Score']}% Match</span>
-                    </div>
-                    <div style="margin: 8px 0; color: #cbd5e1; font-size: 0.88rem;">
-                        <b>Vacancies:</b> <span style="color: #fdae61; font-weight: 600;">{r['Open Vacancies']:,}</span> &nbsp;|&nbsp; 
-                        <b>Median Pay:</b> <span style="color: #66c2a5; font-weight: 600;">{r['Median Salary']}</span> &nbsp;|&nbsp; 
-                        <b>Education Fit:</b> {r['Education Fit']}
-                    </div>
-                    <div style="margin-top: 6px;">
-                        <span style="color: #94a3b8; font-size: 0.82rem; font-weight: 600;">Recommended Skills to Add: </span>
-                        {missing_pills}
-                    </div>
-                </div>
-                """, unsafe_allow_html=True)
-        else:
-            st.info("No job roles met the threshold. Try adding more skills or lowering the match threshold slider.")
-
-
-# ==============================================================================
-# TAB 6: DATA EXPLORER & EXPORT
-# ==============================================================================
-with tab6:
     st.markdown("<div class='section-title'>📋 Raw Records & Analytical Export</div>", unsafe_allow_html=True)
     st.markdown("<div class='section-desc'>Filter, inspect, and export cleaned job postings and their engineered attributes.</div>", unsafe_allow_html=True)
 

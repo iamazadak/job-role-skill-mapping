@@ -28,7 +28,6 @@ The repository includes an interactive multi-tab analytics application built wit
 - **Compensation & The "Skill Premium"**: Box plots of stipend/salary distributions and diverging bar charts quantifying the monetary value of individual skills.
 - **Talent Pipeline (100% Stacked Bar)**: Educational credentials (8th Pass to B.Tech) mapped against role allocations.
 - **Geographic & Industry Ecosystem**: State-level hiring demand and sector treemaps.
-- **Career & Skill Fit Matcher**: Real-time calculator where candidates select their credentials to calculate fit score, salary expectation, and missing skills to acquire.
 
 ---
 
